@@ -29,15 +29,15 @@ export default async function Home() {
     | undefined = await onGetBlogPosts();
   // console.log(posts);
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <NavBar />
       <section>
-        <div className="flex items-center justify-center flex-col mt-[80px] gap-4 ">
+        <div className="flex items-center justify-center flex-col mt-[80px] gap-4">
           <span className="text-orange bg-orange/20 px-4 py-2 rounded-full text-sm">
             An AI powered sales assistant chatbot
           </span>
           <Image
-            src="/images/corinna-ai-logo.png"
+            src="/images/landing-logo.png"
             width={500}
             height={100}
             alt="Logo"
@@ -48,10 +48,10 @@ export default async function Home() {
             with just a snippet of code!
           </p>
           <Button className="bg-orange font-bold text-white px-4">
-            Start For Free
+            <Link href="/dashboard">Get Started</Link>
           </Button>
           <Image
-            src="/images/iphonecorinna.png"
+            src="/images/iphone-corn-ai.png"
             width={400}
             height={100}
             alt="Logo"
@@ -66,7 +66,7 @@ export default async function Home() {
           {" you're"} not ready to commit you can get started for free.
         </p>
       </section>
-      <div className="flex  justify-center gap-4 flex-wrap mt-6">
+      <div className="flex  justify-center gap-4 flex-wrap my-6">
         {pricingCards.map((card) => (
           <Card
             key={card.title}
