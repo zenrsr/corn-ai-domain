@@ -12,7 +12,7 @@ type Props = {
 
 const IntegrationList = ({ connections }: Props) => {
   return (
-    <div className="flex-1 h-0 grid grid-cols-1 content-start lg:grid-cols-3 xl:grid-cols-4 gap-3 p-4">
+    <div className="grid grid-cols-1 content-start lg:grid-cols-2 xl:grid-cols-3 gap-3 p-4">
       {INTEGRATION_LIST_ITEMS.map((item) => (
         <Card
           key={item.id}
